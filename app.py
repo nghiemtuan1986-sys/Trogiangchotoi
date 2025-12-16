@@ -191,8 +191,7 @@ st.markdown("""
 st.markdown("""
 <div class="main-header">
     <h1>📘 TRỢ LÝ SOẠN GIÁO ÁN TỰ ĐỘNG (NLS)</h1>
-    <p>Tác giả: Lù Seo Sần - Trường PTDTBT Tiểu học Bản Ngò - ĐT: 097 1986 343</p>
-</div>
+    <p>Tác giả: Nghiêm Thanh Tuấn - Trường PTDTBT Tiểu học Quảng Nguyên - ĐT: 0365 601 999999</p> </div>
 """, unsafe_allow_html=True)
 
 if "GEMINI_API_KEY" in st.secrets:
@@ -317,34 +316,4 @@ if st.button("🚀 SOẠN GIÁO ÁN NGAY"):
                                 tmp.write(f.getvalue())
                                 temp_paths.append(tmp.name)
                             input_data.append(genai.upload_file(tmp.name))
-                        else:
-                            input_data.append(Image.open(f))
-                
-                if noidung_bosung: input_data.append(noidung_bosung)
-                
-                response = model.generate_content(input_data)
-                
-                st.markdown("### 📄 KẾT QUẢ BÀI SOẠN:")
-                st.markdown(f'<div class="lesson-plan-paper">{response.text}</div>', unsafe_allow_html=True)
-                
-                doc = create_doc_stable(response.text, ten_bai, lop)
-                buf = io.BytesIO()
-                doc.save(buf)
-                buf.seek(0)
-                
-                st.download_button(
-                    label="⬇️ TẢI FILE WORD CHUẨN A4",
-                    data=buf,
-                    file_name=f"GiaoAn_{ten_bai}.docx",
-                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                    type="primary"
-                )
-                
-                for p in temp_paths: os.remove(p)
-
-        except Exception as e:
-            st.error(f"Có lỗi xảy ra: {e}")
-
-# --- CHÂN TRANG ---
-st.markdown("---")
-st.markdown("<div style='text-align: center; color: #666;'>© 2025 - Lù Seo Sần - Trường PTDTBT Tiểu học Bản Ngò - ĐT: 097 1986 343</div>", unsafe_allow_html=True)
+                        999</div>", unsafe_allow_html=True)
