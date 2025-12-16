@@ -191,7 +191,7 @@ st.markdown("""
 st.markdown("""
 <div class="main-header">
     <h1>📘 TRỢ LÝ SOẠN GIÁO ÁN TỰ ĐỘNG (NLS)</h1>
-    <p>Tác giả: Nghiêm Thanh Tuấn - Trường PTDTBT Tiểu học Quảng Nguyên - ĐT: 0365 601 999999</p> </div>
+    <p>Tác giả: Nghiêm Thanh Tuấn - Trường PTDTBT Tiểu học Quảng Nguyên - ĐT: 0365 601 999</p> </div>
 """, unsafe_allow_html=True)
 
 if "GEMINI_API_KEY" in st.secrets:
